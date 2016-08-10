@@ -89,6 +89,9 @@ type OfnetDatapath interface {
 
 	// Return the datapath state
 	InspectState() (interface{}, error)
+
+	//Inspect bgp
+	InspectBgp() (interface{}, error)
 }
 
 // Interface implemented by each control protocol.
