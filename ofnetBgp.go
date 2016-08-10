@@ -60,7 +60,7 @@ type OfnetBgp struct {
 
 type OfnetBgpInspect struct {
 	Peer *api.Peer
-	Rib *api.Table
+	Rib  *api.Table
 }
 
 // Create a new vlrouter instance
