@@ -89,9 +89,6 @@ type OfnetDatapath interface {
 
 	// Return the datapath state
 	InspectState() (interface{}, error)
-
-	//Inspect bgp
-	InspectProto() (interface{}, error)
 }
 
 // Interface implemented by each control protocol.
@@ -119,6 +116,9 @@ type OfnetProto interface {
 
 	//Modify protocol Rib (Could be used for testing)
 	ModifyProtoRib(path interface{})
+
+	//Inspect bgp
+	InspectProto() (interface{}, error)
 }
 
 // Default port numbers
