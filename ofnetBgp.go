@@ -809,8 +809,7 @@ func (self *OfnetBgp) sendArpPacketOut() {
 	self.agent.ofSwitch.Send(pktOut)
 }
 
-func (self *OfnetBgp) InspectBgp() (interface{}, error) {
-	log.Infof("OfnetBgp. InspectBgp")
+func (self *OfnetBgp) InspectProto() (interface{}, error) {
 	OfnetBgpInspect := new(OfnetBgpInspect)
 	var err error
 
@@ -835,10 +834,6 @@ func (self *OfnetBgp) InspectBgp() (interface{}, error) {
 		log.Errorf("GetRib failed: %v", err)
 		return nil, err
 	}
-
-	log.Infof("Peer: %v\n", OfnetBgpInspect.Peer)
-	log.Infof("Rib: %v\n", OfnetBgpInspect.Rib)
-	log.Infof("OfnetBgpInspect: {%#v}\n", OfnetBgpInspect)
 
 	return OfnetBgpInspect, nil
 }

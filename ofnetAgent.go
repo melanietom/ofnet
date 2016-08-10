@@ -921,8 +921,7 @@ func (self *OfnetAgent) GetEndpointStats() ([]*OfnetEndpointStats, error) {
 
 // InspectBgp returns ofnet bgp state
 func (self *OfnetAgent) InspectBgp() (interface{}, error) {
-	log.Infof("OfnetAgent. InspectBgp")
-	peer, err := self.protopath.InspectBgp()
+	peer, err := self.protopath.InspectProto()
 	return peer, err
 }
 
